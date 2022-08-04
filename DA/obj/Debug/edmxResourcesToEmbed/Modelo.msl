@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CatalogoModelStoreContainer" CdmEntityContainer="CatalogoEntities">
+    <EntitySetMapping Name="categorias">
+      <EntityTypeMapping TypeName="CatalogoModel.categoria">
+        <MappingFragment StoreEntitySet="categoria">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errors">
+      <EntityTypeMapping TypeName="CatalogoModel.error">
+        <MappingFragment StoreEntitySet="error">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="MensajeError" ColumnName="MensajeError" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productoes">
+      <EntityTypeMapping TypeName="CatalogoModel.producto">
+        <MappingFragment StoreEntitySet="producto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

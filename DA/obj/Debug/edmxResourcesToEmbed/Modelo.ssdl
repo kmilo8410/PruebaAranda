@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CatalogoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MensajeError" Type="text" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="IdCategoria" Type="int" Nullable="false" />
+    <Property Name="Imagen" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <Association Name="FK_producto_categoria">
+    <End Role="categoria" Type="Self.categoria" Multiplicity="1" />
+    <End Role="producto" Type="Self.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CatalogoModelStoreContainer">
+    <EntitySet Name="categoria" EntityType="Self.categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="error" EntityType="Self.error" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="producto" EntityType="Self.producto" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_producto_categoria" Association="Self.FK_producto_categoria">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="producto" EntitySet="producto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

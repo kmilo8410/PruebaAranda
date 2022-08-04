@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CatalogoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="productoes" Relationship="Self.FK_producto_categoria" FromRole="categoria" ToRole="producto" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MensajeError" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Hora" Type="Time" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCategoria" Type="Int32" Nullable="false" />
+    <Property Name="Imagen" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="categoria" Relationship="Self.FK_producto_categoria" FromRole="producto" ToRole="categoria" />
+  </EntityType>
+  <Association Name="FK_producto_categoria">
+    <End Role="categoria" Type="Self.categoria" Multiplicity="1" />
+    <End Role="producto" Type="Self.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CatalogoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categorias" EntityType="Self.categoria" />
+    <EntitySet Name="errors" EntityType="Self.error" />
+    <EntitySet Name="productoes" EntityType="Self.producto" />
+    <AssociationSet Name="FK_producto_categoria" Association="Self.FK_producto_categoria">
+      <End Role="categoria" EntitySet="categorias" />
+      <End Role="producto" EntitySet="productoes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

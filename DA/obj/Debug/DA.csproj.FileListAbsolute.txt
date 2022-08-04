@@ -1,0 +1,14 @@
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\DA.dll.config
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\DA.dll
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\DA.pdb
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\Entidad.dll
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\EntityFramework.dll
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\Entidad.pdb
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\EntityFramework.xml
+C:\Users\Test\source\repos\PruebaAranda\DA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Test\source\repos\PruebaAranda\DA\obj\Debug\DA.csproj.AssemblyReference.cache
+C:\Users\Test\source\repos\PruebaAranda\DA\obj\Debug\DA.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\PruebaAranda\DA\obj\Debug\DA.csproj.CopyComplete
+C:\Users\Test\source\repos\PruebaAranda\DA\obj\Debug\DA.dll
+C:\Users\Test\source\repos\PruebaAranda\DA\obj\Debug\DA.pdb

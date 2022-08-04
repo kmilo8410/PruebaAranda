@@ -1,0 +1,14 @@
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\BL.dll
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\BL.pdb
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\DA.dll
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\Entidad.dll
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\EntityFramework.dll
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\DA.pdb
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\DA.dll.config
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\Entidad.pdb
+C:\Users\Test\source\repos\PruebaAranda\BL\bin\Debug\EntityFramework.xml
+C:\Users\Test\source\repos\PruebaAranda\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\Test\source\repos\PruebaAranda\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\PruebaAranda\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\Test\source\repos\PruebaAranda\BL\obj\Debug\BL.dll
+C:\Users\Test\source\repos\PruebaAranda\BL\obj\Debug\BL.pdb
